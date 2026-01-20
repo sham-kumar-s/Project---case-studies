@@ -1,41 +1,38 @@
-"use client";
-
 import PageTransition from "@/app/components/animations/PageTransition";
 
-export default function ChatAppOverview() {
+export default function ImageSearchOverview() {
   return (
     <PageTransition>
       <section className="max-w-4xl">
         <h1 className="text-3xl font-bold mb-4">
-          Room Booking Application
+          Image Search Application
         </h1>
 
-        <p className="text-neutral-300 leading-relaxed mb-8">
-          This case study documents the design and implementation of a
-          production-grade room booking system. The focus is on scalability,
-          low-latency messaging, system design decisions, and real-world trade-offs.
+        <p className="text-neutral-300 leading-relaxed mb-6">
+          This project is a frontend-focused image search application that
+          allows users to search and browse images in real time using a public
+          image API. The main focus is on user experience, performance, and
+          efficient API usage.
         </p>
 
         <div className="grid grid-cols-2 gap-6">
           <div className="rounded-xl border border-neutral-800 bg-neutral-900 p-5">
             <h3 className="font-semibold mb-2">Tech Stack</h3>
             <ul className="text-sm text-neutral-400 space-y-1">
-              <li>Frontend: Next.js, React</li>
-              <li>Backend: Node.js, Express</li>
-              <li>Database: MongoDB</li>
-              <li>Real-Time: WebSockets</li>
-              <li>Cache / PubSub: Redis</li>
+              <li>Frontend: React</li>
+              <li>Styling: CSS / Tailwind</li>
+              <li>API: Public Image Search API</li>
+              <li>Hosting: Netlify</li>
             </ul>
           </div>
 
           <div className="rounded-xl border border-neutral-800 bg-neutral-900 p-5">
-            <h3 className="font-semibold mb-2">What This Covers</h3>
+            <h3 className="font-semibold mb-2">Key Focus Areas</h3>
             <ul className="text-sm text-neutral-400 space-y-1">
-              <li>System architecture & data flow</li>
-              <li>Database and API design</li>
-              <li>Scaling strategies</li>
-              <li>Security considerations</li>
-              <li>Failures and improvements</li>
+              <li>Search UX</li>
+              <li>API efficiency</li>
+              <li>Frontend performance</li>
+              <li>Responsive layout</li>
             </ul>
           </div>
         </div>

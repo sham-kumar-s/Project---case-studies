@@ -1,33 +1,26 @@
 import PageTransition from "@/app/components/animations/PageTransition";
 import SectionHeader from "@/app/components/ui/SectionHeader";
 
-export default function DataModelPage() {
+export default function DataModel() {
   return (
     <PageTransition>
       <section className="max-w-4xl">
         <SectionHeader
           title="Data Model"
-          subtitle="How data is structured and stored"
+          subtitle="Structured financial data storage"
         />
 
         <p className="text-neutral-300 leading-relaxed mb-6">
-          The system uses MongoDB as the primary data store due to its flexible
-          schema and suitability for rapidly evolving product requirements.
-          Data is organized around users, rooms, and bookings.
+          The system uses a relational data model to ensure consistency and
+          enforce strong relationships between financial entities.
         </p>
 
-        <h3 className="text-lg font-semibold mb-2">Core Collections</h3>
-
-        <ul className="list-disc list-inside text-neutral-400 space-y-2 mb-6">
-          <li><strong>Users</strong> – profile, role, authentication data</li>
-          <li><strong>Rooms</strong> – room details, capacity, availability</li>
-          <li><strong>Bookings</strong> – user, room, time window, status</li>
+        <ul className="list-disc list-inside text-neutral-400 space-y-2">
+          <li>Users – roles and permissions</li>
+          <li>Assets – instruments and identifiers</li>
+          <li>Transactions – historical records</li>
+          <li>Analytics – computed metrics</li>
         </ul>
-
-        <p className="text-neutral-300 leading-relaxed">
-          Indexes are created on frequently queried fields such as roomId,
-          userId, and booking time ranges to optimize read performance.
-        </p>
       </section>
     </PageTransition>
   );

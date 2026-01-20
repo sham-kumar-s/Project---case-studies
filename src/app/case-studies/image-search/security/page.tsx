@@ -1,25 +1,19 @@
 import PageTransition from "@/app/components/animations/PageTransition";
 import SectionHeader from "@/app/components/ui/SectionHeader";
 
-export default function SecurityPage() {
+export default function Security() {
   return (
     <PageTransition>
       <section className="max-w-4xl">
         <SectionHeader
-          title="Security"  
-          subtitle="Protecting data and access"
+          title="Security"
+          subtitle="Safe client-side access"
         />
 
-        <p className="text-neutral-300 leading-relaxed mb-6">
-          Security is enforced through authentication, authorization, and
-          request validation at multiple layers of the system.
-        </p>
-
         <ul className="list-disc list-inside text-neutral-400 space-y-2">
-          <li>JWT-based authentication</li>
-          <li>Role-based access control</li>
-          <li>Input validation and sanitization</li>
-          <li>Rate limiting and abuse prevention</li>
+          <li>API key stored securely (env variables)</li>
+          <li>Read-only API permissions</li>
+          <li>Input sanitization</li>
         </ul>
       </section>
     </PageTransition>

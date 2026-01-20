@@ -1,33 +1,26 @@
 import PageTransition from "@/app/components/animations/PageTransition";
 import SectionHeader from "@/app/components/ui/SectionHeader";
 
-export default function ProblemPage() {
+export default function Problem() {
   return (
     <PageTransition>
       <section className="max-w-4xl">
         <SectionHeader
           title="Problem Statement"
-          subtitle="Why this system was needed"
+          subtitle="Challenges in investment analytics platforms"
         />
 
         <p className="text-neutral-300 leading-relaxed mb-6">
-          Modern chat applications must support thousands of concurrent users,
-          deliver messages in real time, and remain reliable under fluctuating
-          traffic. Traditional HTTP-based polling solutions introduce latency,
-          waste bandwidth, and fail to scale efficiently.
-        </p>
-
-        <p className="text-neutral-300 leading-relaxed mb-6">
-          The challenge was to design a system that ensures low-latency message
-          delivery, maintains consistent user presence, and supports horizontal
-          scaling without sacrificing reliability.
+          Investors require accurate, real-time insights derived from large
+          volumes of financial data. Traditional tools often lack flexibility,
+          transparency, and performance when handling complex analytics.
         </p>
 
         <ul className="list-disc list-inside text-neutral-400 space-y-2">
-          <li>Real-time message delivery</li>
-          <li>High concurrency support</li>
-          <li>Scalable architecture</li>
-          <li>Reliable message ordering</li>
+          <li>Handling large financial datasets</li>
+          <li>Ensuring data accuracy and consistency</li>
+          <li>Delivering fast and interactive dashboards</li>
+          <li>Securing sensitive financial information</li>
         </ul>
       </section>
     </PageTransition>

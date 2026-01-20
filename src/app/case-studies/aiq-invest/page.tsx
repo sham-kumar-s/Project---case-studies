@@ -1,41 +1,38 @@
-"use client";
-
 import PageTransition from "@/app/components/animations/PageTransition";
 
-export default function ChatAppOverview() {
+export default function AIQOverview() {
   return (
     <PageTransition>
       <section className="max-w-4xl">
         <h1 className="text-3xl font-bold mb-4">
-          Room Booking Application
+          AIQ Capital – Investment Analytics Platform
         </h1>
 
-        <p className="text-neutral-300 leading-relaxed mb-8">
-          This case study documents the design and implementation of a
-          production-grade room booking system. The focus is on scalability,
-          low-latency messaging, system design decisions, and real-world trade-offs.
+        <p className="text-neutral-300 leading-relaxed mb-6">
+          AIQ Capital is a data-driven investment analytics platform designed to
+          provide users with insights, performance metrics, and decision support
+          for modern financial markets. The system focuses on data accuracy,
+          visualization, and secure access to financial intelligence.
         </p>
 
         <div className="grid grid-cols-2 gap-6">
           <div className="rounded-xl border border-neutral-800 bg-neutral-900 p-5">
             <h3 className="font-semibold mb-2">Tech Stack</h3>
             <ul className="text-sm text-neutral-400 space-y-1">
-              <li>Frontend: Next.js, React</li>
-              <li>Backend: Node.js, Express</li>
-              <li>Database: MongoDB</li>
-              <li>Real-Time: WebSockets</li>
-              <li>Cache / PubSub: Redis</li>
+              <li>Frontend: React / Next.js</li>
+              <li>Backend: Node.js</li>
+              <li>Database: PostgreSQL</li>
+              <li>Analytics: Custom data pipelines</li>
             </ul>
           </div>
 
           <div className="rounded-xl border border-neutral-800 bg-neutral-900 p-5">
-            <h3 className="font-semibold mb-2">What This Covers</h3>
+            <h3 className="font-semibold mb-2">Key Focus Areas</h3>
             <ul className="text-sm text-neutral-400 space-y-1">
-              <li>System architecture & data flow</li>
-              <li>Database and API design</li>
-              <li>Scaling strategies</li>
-              <li>Security considerations</li>
-              <li>Failures and improvements</li>
+              <li>Financial data modeling</li>
+              <li>Secure access control</li>
+              <li>High-performance dashboards</li>
+              <li>Scalable analytics</li>
             </ul>
           </div>
         </div>

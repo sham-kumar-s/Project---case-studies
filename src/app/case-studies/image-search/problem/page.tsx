@@ -1,33 +1,27 @@
 import PageTransition from "@/app/components/animations/PageTransition";
 import SectionHeader from "@/app/components/ui/SectionHeader";
 
-export default function ProblemPage() {
+export default function Problem() {
   return (
     <PageTransition>
       <section className="max-w-4xl">
         <SectionHeader
           title="Problem Statement"
-          subtitle="Why this system was needed"
+          subtitle="Challenges in image search interfaces"
         />
 
         <p className="text-neutral-300 leading-relaxed mb-6">
-          Modern chat applications must support thousands of concurrent users,
-          deliver messages in real time, and remain reliable under fluctuating
-          traffic. Traditional HTTP-based polling solutions introduce latency,
-          waste bandwidth, and fail to scale efficiently.
-        </p>
-
-        <p className="text-neutral-300 leading-relaxed mb-6">
-          The challenge was to design a system that ensures low-latency message
-          delivery, maintains consistent user presence, and supports horizontal
-          scaling without sacrificing reliability.
+          Image search applications must deliver fast, visually rich results
+          while minimizing API calls and handling unpredictable user queries.
+          Poorly optimized search can lead to slow load times and rate limit
+          issues.
         </p>
 
         <ul className="list-disc list-inside text-neutral-400 space-y-2">
-          <li>Real-time message delivery</li>
-          <li>High concurrency support</li>
-          <li>Scalable architecture</li>
-          <li>Reliable message ordering</li>
+          <li>High latency image loading</li>
+          <li>API rate limiting</li>
+          <li>Poor mobile responsiveness</li>
+          <li>Unclear search feedback</li>
         </ul>
       </section>
     </PageTransition>

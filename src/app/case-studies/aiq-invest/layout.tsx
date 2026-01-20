@@ -1,4 +1,4 @@
-export default function ChatAppLayout({
+export default function AIQLayout({
   children,
 }: {
   children: React.ReactNode;
