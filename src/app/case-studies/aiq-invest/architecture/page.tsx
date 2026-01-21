@@ -1,5 +1,9 @@
 import PageTransition from "@/app/components/animations/PageTransition";
 import SectionHeader from "@/app/components/ui/SectionHeader";
+import SubHeading from "@/app/components/ui/SubHeading";
+import BulletList from "@/app/components/ui/BulletList";
+import SectionDivider from "@/app/components/ui/SectionDivider";
+import Mermaid from "@/app/components/ui/Mermaid";
 
 export default function Architecture() {
   return (
@@ -16,12 +20,28 @@ export default function Architecture() {
           maintainability as data volume grows.
         </p>
 
-        <ul className="list-disc list-inside text-neutral-400 space-y-2">
-          <li>Frontend dashboard for visualization</li>
-          <li>Backend services for analytics logic</li>
-          <li>PostgreSQL for structured financial data</li>
-          <li>Batch and near-real-time data pipelines</li>
-        </ul>
+        <Mermaid
+          chart={`
+flowchart TD
+    DataSource --> IngestionService
+    IngestionService --> Database
+    Database --> AnalyticsService
+    AnalyticsService --> API
+    API --> Dashboard
+          `}
+        />
+
+        <SectionDivider />
+
+        <SubHeading>Key Architecture Layers</SubHeading>
+        <BulletList
+          items={[
+            "Frontend dashboard for visualization",
+            "Backend services for analytics logic",
+            "PostgreSQL for structured financial data",
+            "Batch and near-real-time data pipelines",
+          ]}
+        />
       </section>
     </PageTransition>
   );

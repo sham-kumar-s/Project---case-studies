@@ -1,5 +1,9 @@
 import PageTransition from "@/app/components/animations/PageTransition";
 import SectionHeader from "@/app/components/ui/SectionHeader";
+import SubHeading from "@/app/components/ui/SubHeading";
+import BulletList from "@/app/components/ui/BulletList";
+import SectionDivider from "@/app/components/ui/SectionDivider";
+import Mermaid from "@/app/components/ui/Mermaid";
 
 export default function ArchitecturePage() {
   return (
@@ -16,23 +20,36 @@ export default function ArchitecturePage() {
           REST APIs for standard operations.
         </p>
 
+        <Mermaid
+          chart={`
+flowchart TD
+    User -->|HTTP| Frontend
+    Frontend -->|REST API| Backend
+    Backend -->|Check Availability| Database
+    Backend -->|Create Booking| Database
+    Backend -->|Notify| Redis
+    Redis --> Backend
+          `}
+        />
+
+        <SectionDivider />
+
         <p className="text-neutral-300 leading-relaxed mb-6">
           A Redis-based Pub/Sub layer enables horizontal scaling by synchronizing
           messages across multiple backend instances. MongoDB is used as the
           primary data store for chat history and user metadata.
         </p>
 
-        <h3 className="text-lg font-semibold mb-3">
-          Core Components
-        </h3>
-
-        <ul className="list-disc list-inside text-neutral-400 space-y-2">
-          <li>Next.js frontend for UI and routing</li>
-          <li>Node.js backend for APIs and sockets</li>
-          <li>WebSocket layer for real-time messaging</li>
-          <li>Redis for Pub/Sub and caching</li>
-          <li>MongoDB for persistent storage</li>
-        </ul>
+        <SubHeading>Core Components</SubHeading>
+        <BulletList
+          items={[
+            "Next.js frontend for UI and routing",
+            "Node.js backend for APIs and sockets",
+            "WebSocket layer for real-time messaging",
+            "Redis for Pub/Sub and caching",
+            "MongoDB for persistent storage",
+          ]}
+        />
       </section>
     </PageTransition>
   );

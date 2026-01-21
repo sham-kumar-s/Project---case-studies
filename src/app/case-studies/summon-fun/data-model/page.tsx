@@ -1,5 +1,9 @@
 import PageTransition from "@/app/components/animations/PageTransition";
 import SectionHeader from "@/app/components/ui/SectionHeader";
+import SubHeading from "@/app/components/ui/SubHeading";
+import BulletList from "@/app/components/ui/BulletList";
+import Callout from "@/app/components/ui/Callout";
+import SectionDivider from "@/app/components/ui/SectionDivider";
 
 export default function DataModel() {
   return (
@@ -15,11 +19,26 @@ export default function DataModel() {
           while non-critical metadata and analytics are handled off-chain.
         </p>
 
-        <ul className="list-disc list-inside text-neutral-400 space-y-2">
-          <li>Wallet address as primary identity</li>
-          <li>Smart contract state for core logic</li>
-          <li>Backend database for analytics & UI state</li>
-        </ul>
+        <SectionDivider />
+
+        <SubHeading>Core Data Structure</SubHeading>
+        <BulletList
+          items={[
+            "Wallet address as primary identity",
+            "Smart contract state for core logic",
+            "Backend database for analytics & UI state",
+          ]}
+        />
+
+        <Callout type="decision" title="Hybrid Storage Strategy">
+          We decided to store only the hash of the metadata on-chain to save on gas fees, 
+          while keeping the full JSON objects in a decentralized storage layer (IPFS).
+        </Callout>
+
+        <Callout type="trade-off" title="Latency vs. Consistency">
+          Using off-chain indexing improves read performance significantly but introduces 
+          a 2-3 second delay before on-chain actions are reflected in the UI.
+        </Callout>
       </section>
     </PageTransition>
   );
