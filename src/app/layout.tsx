@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${manrope.className} bg-gray-50 text-neutral-900 antialiased`}>
+      <body className={`${manrope.className} bg-gray-50 text-neutral-900 antialiased`} suppressHydrationWarning>
         <AppNavbar />
         {children}
         <Footer />

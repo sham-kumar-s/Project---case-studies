@@ -56,13 +56,18 @@ export default function Mermaid({ chart }: MermaidProps) {
 
   return (
     <div className="flex justify-center my-10 p-6 bg-gray-50 rounded-2xl border border-gray-200 overflow-x-auto shadow-sm">
+      {/* Placeholder Loading State */}
+      {!isLoaded && (
+        <div className="h-48 w-full animate-pulse bg-gray-200 rounded-lg flex items-center justify-center text-neutral-400 text-sm">
+          Loading Diagram...
+        </div>
+      )}
+
+      {/* Mermaid Diagram Container - Always present but hidden until loaded */}
       <div 
         ref={ref} 
-        className={`mermaid transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
-      >
-        {/* Placeholder while loading to prevent layout shift */}
-        {!isLoaded && <div className="h-48 w-full animate-pulse bg-gray-200 rounded-lg"></div>}
-      </div>
+        className={`mermaid transition-opacity duration-500 ${isLoaded ? 'opacity-100 block' : 'opacity-0 hidden'}`}
+      />
     </div>
   );
 }
