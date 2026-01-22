@@ -13,11 +13,11 @@ export default function RoomBookingOverview() {
       <div className="max-w-4xl space-y-24">
         {/* Overview Section */}
         <section id="overview" className="scroll-mt-20">
-          <h1 className="text-4xl font-bold mb-4 bg-linear-to-r from-white to-neutral-500 bg-clip-text text-transparent">
+          <h1 className="text-4xl font-bold mb-4 text-black">
             Room Booking Application
           </h1>
 
-          <p className="text-lg text-neutral-300 leading-relaxed mb-8">
+          <p className="text-lg text-black leading-relaxed mb-8">
             This case study documents the design and implementation of a
             production-grade room booking system. The focus is on scalability,
             low-latency messaging, system design decisions, and real-world trade-offs.
@@ -27,8 +27,8 @@ export default function RoomBookingOverview() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="rounded-xl border border-neutral-800 bg-neutral-900 p-5">
-              <h3 className="font-semibold mb-2">Tech Stack</h3>
-              <ul className="text-sm text-neutral-400 space-y-1">
+              <h3 className="font-semibold mb-2 text-white">Tech Stack</h3>
+              <ul className="text-sm text-white space-y-1">
                 <li>Frontend: Next.js, React</li>
                 <li>Backend: Node.js, Express</li>
                 <li>Database: MongoDB</li>
@@ -38,8 +38,8 @@ export default function RoomBookingOverview() {
             </div>
 
             <div className="rounded-xl border border-neutral-800 bg-neutral-900 p-5">
-              <h3 className="font-semibold mb-2">What This Covers</h3>
-              <ul className="text-sm text-neutral-400 space-y-1">
+              <h3 className="font-semibold mb-2 text-white">What This Covers</h3>
+              <ul className="text-sm text-white space-y-1">
                 <li>System architecture & data flow</li>
                 <li>Database and API design</li>
                 <li>Scaling strategies</li>
@@ -57,20 +57,20 @@ export default function RoomBookingOverview() {
             subtitle="Why this system was needed"
           />
 
-          <p className="text-neutral-300 leading-relaxed mb-6">
+          <p className="text-black leading-relaxed mb-6">
             Modern chat applications must support thousands of concurrent users,
             deliver messages in real time, and remain reliable under fluctuating
             traffic. Traditional HTTP-based polling solutions introduce latency,
             waste bandwidth, and fail to scale efficiently.
           </p>
 
-          <p className="text-neutral-300 leading-relaxed mb-6">
+          <p className="text-black leading-relaxed mb-6">
             The challenge was to design a system that ensures low-latency message
             delivery, maintains consistent user presence, and supports horizontal
             scaling without sacrificing reliability.
           </p>
 
-          <ul className="list-disc list-inside text-neutral-400 space-y-2">
+          <ul className="list-disc list-inside text-black space-y-2">
             <li>Real-time message delivery</li>
             <li>High concurrency support</li>
             <li>Scalable architecture</li>
@@ -85,7 +85,7 @@ export default function RoomBookingOverview() {
             subtitle="High-level design and data flow"
           />
 
-          <p className="text-neutral-300 leading-relaxed mb-6">
+          <p className="text-black leading-relaxed mb-6">
             The system follows a service-oriented architecture where the frontend
             communicates with the backend over WebSockets for real-time events and
             REST APIs for standard operations.
@@ -105,7 +105,7 @@ flowchart TD
 
           <SectionDivider />
 
-          <p className="text-neutral-300 leading-relaxed mb-6">
+          <p className="text-black leading-relaxed mb-6">
             A Redis-based Pub/Sub layer enables horizontal scaling by synchronizing
             messages across multiple backend instances. MongoDB is used as the
             primary data store for chat history and user metadata.
@@ -130,7 +130,7 @@ flowchart TD
             subtitle="How data is structured and stored"
           />
 
-          <p className="text-neutral-300 leading-relaxed mb-6">
+          <p className="text-black leading-relaxed mb-6">
             The system uses MongoDB as the primary data store due to its flexible
             schema and suitability for rapidly evolving product requirements.
             Data is organized around users, rooms, and bookings.
@@ -138,13 +138,13 @@ flowchart TD
 
           <h3 className="text-lg font-semibold mb-2">Core Collections</h3>
 
-          <ul className="list-disc list-inside text-neutral-400 space-y-2 mb-6">
+          <ul className="list-disc list-inside text-black space-y-2 mb-6">
             <li><strong>Users</strong> – profile, role, authentication data</li>
             <li><strong>Rooms</strong> – room details, capacity, availability</li>
             <li><strong>Bookings</strong> – user, room, time window, status</li>
           </ul>
 
-          <p className="text-neutral-300 leading-relaxed">
+          <p className="text-black leading-relaxed">
             Indexes are created on frequently queried fields such as roomId,
             userId, and booking time ranges to optimize read performance.
           </p>
@@ -157,21 +157,21 @@ flowchart TD
             subtitle="How clients interact with the system"
           />
 
-          <p className="text-neutral-300 leading-relaxed mb-6">
+          <p className="text-black leading-relaxed mb-6">
             The backend exposes RESTful APIs for booking management and uses
             WebSockets for real-time availability updates.
           </p>
 
           <h3 className="text-lg font-semibold mb-2">Key Endpoints</h3>
 
-          <ul className="list-disc list-inside text-neutral-400 space-y-2 mb-6">
+          <ul className="list-disc list-inside text-black space-y-2 mb-6">
             <li><code>POST /bookings</code> – create a booking</li>
             <li><code>GET /rooms</code> – list available rooms</li>
             <li><code>GET /bookings/:id</code> – booking details</li>
             <li><code>DELETE /bookings/:id</code> – cancel booking</li>
           </ul>
 
-          <p className="text-neutral-300 leading-relaxed">
+          <p className="text-black leading-relaxed">
             APIs are versioned and include proper validation, error handling,
             and idempotency where required.
           </p>
@@ -184,12 +184,12 @@ flowchart TD
             subtitle="Protecting data and access"
           />
 
-          <p className="text-neutral-300 leading-relaxed mb-6">
+          <p className="text-black leading-relaxed mb-6">
             Security is enforced through authentication, authorization, and
             request validation at multiple layers of the system.
           </p>
 
-          <ul className="list-disc list-inside text-neutral-400 space-y-2">
+          <ul className="list-disc list-inside text-black space-y-2">
             <li>JWT-based authentication</li>
             <li>Role-based access control</li>
             <li>Input validation and sanitization</li>
@@ -204,21 +204,21 @@ flowchart TD
             subtitle="How the system handles growth"
           />
 
-          <p className="text-neutral-300 leading-relaxed mb-6">
+          <p className="text-black leading-relaxed mb-6">
             The backend exposes RESTful APIs for booking management and uses
             WebSockets for real-time availability updates.
           </p>
 
           <h3 className="text-lg font-semibold mb-2">Key Strategies</h3>
 
-          <ul className="list-disc list-inside text-neutral-400 space-y-2 mb-6">
+          <ul className="list-disc list-inside text-black space-y-2 mb-6">
             <li>Horizontal scaling with load balancers</li>
             <li>Redis for distributed caching</li>
             <li>Database replication and sharding</li>
             <li>CDN for static assets</li>
           </ul>
 
-          <p className="text-neutral-300 leading-relaxed">
+          <p className="text-black leading-relaxed">
             The system is designed to scale horizontally, allowing for easy
             addition of new instances to handle increased load.
           </p>
@@ -231,18 +231,18 @@ flowchart TD
             subtitle="What went wrong and what was learned"
           />
 
-          <p className="text-neutral-300 leading-relaxed mb-6">
+          <p className="text-black leading-relaxed mb-6">
             During development, several issues were encountered, including race
             conditions in booking creation and inefficient database queries.
           </p>
 
-          <ul className="list-disc list-inside text-neutral-400 space-y-2">
+          <ul className="list-disc list-inside text-black space-y-2">
             <li>Overbooking due to missing atomic operations</li>
             <li>Slow queries caused by missing indexes</li>
             <li>Improper WebSocket cleanup leading to memory leaks</li>
           </ul>
 
-          <p className="text-neutral-300 leading-relaxed mt-6">
+          <p className="text-black leading-relaxed mt-6">
             These failures guided improvements in transaction handling,
             indexing strategies, and connection lifecycle management.
           </p>
@@ -255,12 +255,12 @@ flowchart TD
             subtitle="How the system can evolve"
           />
 
-          <p className="text-neutral-300 leading-relaxed mb-6">
+          <p className="text-black leading-relaxed mb-6">
             With additional time and resources, several improvements could
             further enhance scalability, reliability, and user experience.
           </p>
 
-          <ul className="list-disc list-inside text-neutral-400 space-y-2">
+          <ul className="list-disc list-inside text-black space-y-2">
             <li>Move booking logic to database-level transactions</li>
             <li>Introduce event-driven architecture</li>
             <li>Add monitoring and alerting</li>

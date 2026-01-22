@@ -13,11 +13,11 @@ export default function SummonOverview() {
       <div className="max-w-4xl space-y-24">
         {/* Overview Section */}
         <section id="overview" className="scroll-mt-20">
-          <h1 className="text-4xl font-bold mb-4 bg-linear-to-r from-white to-neutral-500 bg-clip-text text-transparent">
+          <h1 className="text-4xl font-bold mb-4 text-black">
             Summon.fun
           </h1>
 
-          <p className="text-lg text-neutral-300 leading-relaxed mb-8">
+          <p className="text-lg text-black leading-relaxed mb-8">
             Summon.fun is a Web3-based interactive platform that allows users to
             trigger on-chain and off-chain actions through wallet-based identity.
             The project focuses on seamless blockchain UX, secure interactions,
@@ -60,14 +60,14 @@ export default function SummonOverview() {
             subtitle="Challenges in Web3 user interaction"
           />
 
-          <p className="text-neutral-300 leading-relaxed mb-6">
+          <p className="text-black leading-relaxed mb-6">
             Traditional Web3 applications often suffer from poor user experience,
             complex wallet flows, and unclear feedback during on-chain actions.
             Users face uncertainty around transaction status, gas costs, and
             security risks.
           </p>
 
-          <ul className="list-disc list-inside text-neutral-400 space-y-2">
+          <ul className="list-disc list-inside text-black space-y-2">
             <li>Complex wallet onboarding</li>
             <li>Slow and unclear transaction feedback</li>
             <li>Lack of trust and transparency</li>
@@ -82,7 +82,7 @@ export default function SummonOverview() {
             subtitle="On-chain + off-chain coordination"
           />
 
-          <p className="text-neutral-300 leading-relaxed mb-6">
+          <p className="text-black leading-relaxed mb-6">
             The system follows a hybrid Web3 architecture where the frontend
             interacts directly with smart contracts while also communicating with
             backend services for indexing, validation, and analytics.
@@ -129,7 +129,7 @@ flowchart TD
             subtitle="On-chain and off-chain data separation"
           />
 
-          <p className="text-neutral-300 leading-relaxed mb-6">
+          <p className="text-black leading-relaxed mb-6">
             Critical data such as ownership and actions are stored on-chain,
             while non-critical metadata and analytics are handled off-chain.
           </p>
@@ -163,21 +163,21 @@ flowchart TD
             subtitle="How clients interact with the system"
           />
 
-          <p className="text-neutral-300 leading-relaxed mb-6">
+          <p className="text-black leading-relaxed mb-6">
             The backend exposes RESTful APIs for booking management and uses
             WebSockets for real-time availability updates.
           </p>
 
           <h3 className="text-lg font-semibold mb-2">Key Endpoints</h3>
 
-          <ul className="list-disc list-inside text-neutral-400 space-y-2 mb-6">
+          <ul className="list-disc list-inside text-black space-y-2 mb-6">
             <li><code>POST /bookings</code> – create a booking</li>
             <li><code>GET /rooms</code> – list available rooms</li>
             <li><code>GET /bookings/:id</code> – booking details</li>
             <li><code>DELETE /bookings/:id</code> – cancel booking</li>
           </ul>
 
-          <p className="text-neutral-300 leading-relaxed">
+          <p className="text-black leading-relaxed">
             APIs are versioned and include proper validation, error handling,
             and idempotency where required.
           </p>
@@ -190,7 +190,7 @@ flowchart TD
             subtitle="Protecting data and access"
           />
 
-          <p className="text-neutral-300 leading-relaxed mb-6">
+          <p className="text-black leading-relaxed mb-6">
             Security is enforced through authentication, authorization, and
             request validation at multiple layers of the system.
           </p>
@@ -225,21 +225,21 @@ flowchart TD
             subtitle="How the system handles growth"
           />
 
-          <p className="text-neutral-300 leading-relaxed mb-6">
+          <p className="text-black leading-relaxed mb-6">
             The backend exposes RESTful APIs for booking management and uses
             WebSockets for real-time availability updates.
           </p>
 
           <h3 className="text-lg font-semibold mb-2">Key Endpoints</h3>
 
-          <ul className="list-disc list-inside text-neutral-400 space-y-2 mb-6">
+          <ul className="list-disc list-inside text-black space-y-2 mb-6">
             <li><code>POST /bookings</code> – create a booking</li>
             <li><code>GET /rooms</code> – list available rooms</li>
             <li><code>GET /bookings/:id</code> – booking details</li>
             <li><code>DELETE /bookings/:id</code> – cancel booking</li>
           </ul>
 
-          <p className="text-neutral-300 leading-relaxed">
+          <p className="text-black leading-relaxed">
             APIs are versioned and include proper validation, error handling,
             and idempotency where required.
           </p>
@@ -252,18 +252,18 @@ flowchart TD
             subtitle="What went wrong and what was learned"
           />
 
-          <p className="text-neutral-300 leading-relaxed mb-6">
+          <p className="text-black leading-relaxed mb-6">
             During development, several issues were encountered, including race
             conditions in booking creation and inefficient database queries.
           </p>
 
-          <ul className="list-disc list-inside text-neutral-400 space-y-2">
+          <ul className="list-disc list-inside text-black space-y-2">
             <li>Overbooking due to missing atomic operations</li>
             <li>Slow queries caused by missing indexes</li>
             <li>Improper WebSocket cleanup leading to memory leaks</li>
           </ul>
 
-          <p className="text-neutral-300 leading-relaxed mt-6">
+          <p className="text-black leading-relaxed mt-6">
             These failures guided improvements in transaction handling,
             indexing strategies, and connection lifecycle management.
           </p>
@@ -276,12 +276,12 @@ flowchart TD
             subtitle="How the system can evolve"
           />
 
-          <p className="text-neutral-300 leading-relaxed mb-6">
+          <p className="text-black leading-relaxed mb-6">
             With additional time and resources, several improvements could
             further enhance scalability, reliability, and user experience.
           </p>
 
-          <ul className="list-disc list-inside text-neutral-400 space-y-2">
+          <ul className="list-disc list-inside text-black space-y-2">
             <li>Move booking logic to database-level transactions</li>
             <li>Introduce event-driven architecture</li>
             <li>Add monitoring and alerting</li>

@@ -7,11 +7,11 @@ export default function ImageSearchOverview() {
       <div className="max-w-4xl space-y-24">
         {/* Overview Section */}
         <section id="overview" className="scroll-mt-20">
-          <h1 className="text-4xl font-bold mb-4 bg-linear-to-r from-white to-neutral-500 bg-clip-text text-transparent">
+          <h1 className="text-4xl font-bold mb-4 text-black">
             Image Search Application
           </h1>
 
-          <p className="text-lg text-neutral-300 leading-relaxed mb-8">
+          <p className="text-lg text-black leading-relaxed mb-8">
             This project is a frontend-focused image search application that
             allows users to search and browse images in real time using a public
             image API. The main focus is on user experience, performance, and
@@ -20,8 +20,8 @@ export default function ImageSearchOverview() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="rounded-xl border border-neutral-800 bg-neutral-900 p-5">
-              <h3 className="font-semibold mb-2">Tech Stack</h3>
-              <ul className="text-sm text-neutral-400 space-y-1">
+              <h3 className="font-semibold mb-2 text-white">Tech Stack</h3>
+              <ul className="text-sm text-white space-y-1">
                 <li>Frontend: React</li>
                 <li>Styling: CSS / Tailwind</li>
                 <li>API: Public Image Search API</li>
@@ -30,8 +30,8 @@ export default function ImageSearchOverview() {
             </div>
 
             <div className="rounded-xl border border-neutral-800 bg-neutral-900 p-5">
-              <h3 className="font-semibold mb-2">Key Focus Areas</h3>
-              <ul className="text-sm text-neutral-400 space-y-1">
+              <h3 className="font-semibold mb-2 text-white">Key Focus Areas</h3>
+              <ul className="text-sm text-white space-y-1">
                 <li>Search UX</li>
                 <li>API efficiency</li>
                 <li>Frontend performance</li>
@@ -48,14 +48,14 @@ export default function ImageSearchOverview() {
             subtitle="Building an efficient image search experience"
           />
 
-          <p className="text-neutral-300 leading-relaxed mb-6">
+          <p className="text-black leading-relaxed mb-6">
             Image search applications need to provide fast, intuitive search
             experiences while managing API rate limits and optimizing image
             loading. Poor implementations result in slow load times, wasted
             API calls, and frustrated users.
           </p>
 
-          <ul className="list-disc list-inside text-neutral-400 space-y-2">
+          <ul className="list-disc list-inside text-black space-y-2">
             <li>Fast search response times</li>
             <li>Efficient API usage and caching</li>
             <li>Smooth image loading and lazy loading</li>
@@ -70,15 +70,15 @@ export default function ImageSearchOverview() {
             subtitle="Frontend-focused design"
           />
 
-          <p className="text-neutral-300 leading-relaxed mb-6">
+          <p className="text-black leading-relaxed mb-6">
             The application follows a simple client-side architecture where
             React components handle user interactions, API calls, and state
             management. No backend is required as it uses a public image API.
           </p>
 
-          <h3 className="text-lg font-semibold mb-2">Core Components</h3>
+          <h3 className="text-lg font-semibold mb-2 text-black">Core Components</h3>
 
-          <ul className="list-disc list-inside text-neutral-400 space-y-2">
+          <ul className="list-disc list-inside text-black space-y-2">
             <li>Search input with debouncing</li>
             <li>Image grid with lazy loading</li>
             <li>API service layer for requests</li>
@@ -93,15 +93,15 @@ export default function ImageSearchOverview() {
             subtitle="Client-side state management"
           />
 
-          <p className="text-neutral-300 leading-relaxed mb-6">
+          <p className="text-black leading-relaxed mb-6">
             The application manages state locally using React hooks. Data
             includes search queries, image results, loading states, and
             pagination information.
           </p>
 
-          <h3 className="text-lg font-semibold mb-2">State Structure</h3>
+          <h3 className="text-lg font-semibold mb-2 text-black">State Structure</h3>
 
-          <ul className="list-disc list-inside text-neutral-400 space-y-2">
+          <ul className="list-disc list-inside text-black space-y-2">
             <li><strong>searchQuery</strong> – current search term</li>
             <li><strong>images</strong> – array of image results</li>
             <li><strong>loading</strong> – API request status</li>
@@ -116,22 +116,22 @@ export default function ImageSearchOverview() {
             subtitle="Working with external image APIs"
           />
 
-          <p className="text-neutral-300 leading-relaxed mb-6">
+          <p className="text-black leading-relaxed mb-6">
             The application integrates with a public image search API (e.g.,
             Unsplash, Pexels) to fetch images based on user queries. API calls
             are optimized with debouncing and caching.
           </p>
 
-          <h3 className="text-lg font-semibold mb-2">API Features</h3>
+          <h3 className="text-lg font-semibold mb-2 text-black">API Features</h3>
 
-          <ul className="list-disc list-inside text-neutral-400 space-y-2 mb-6">
+          <ul className="list-disc list-inside text-black space-y-2 mb-6">
             <li>Debounced search to reduce API calls</li>
             <li>Pagination for large result sets</li>
             <li>Error handling for failed requests</li>
             <li>Response caching for repeated searches</li>
           </ul>
 
-          <p className="text-neutral-300 leading-relaxed">
+          <p className="text-black leading-relaxed">
             The API service layer abstracts API calls and handles rate limiting
             gracefully.
           </p>
@@ -144,12 +144,12 @@ export default function ImageSearchOverview() {
             subtitle="Protecting API keys and user data"
           />
 
-          <p className="text-neutral-300 leading-relaxed mb-6">
+          <p className="text-black leading-relaxed mb-6">
             While the application is frontend-only, security considerations
             include protecting API keys and ensuring safe image loading.
           </p>
 
-          <ul className="list-disc list-inside text-neutral-400 space-y-2">
+          <ul className="list-disc list-inside text-black space-y-2">
             <li>Environment variables for API keys</li>
             <li>HTTPS for all API requests</li>
             <li>Content Security Policy (CSP) headers</li>
@@ -164,12 +164,12 @@ export default function ImageSearchOverview() {
             subtitle="Handling large image sets"
           />
 
-          <p className="text-neutral-300 leading-relaxed mb-6">
+          <p className="text-black leading-relaxed mb-6">
             Performance is optimized through lazy loading, image compression,
             and efficient rendering techniques.
           </p>
 
-          <ul className="list-disc list-inside text-neutral-400 space-y-2">
+          <ul className="list-disc list-inside text-black space-y-2">
             <li>Lazy loading images as user scrolls</li>
             <li>Responsive images with srcset</li>
             <li>Virtual scrolling for large lists</li>
@@ -184,18 +184,18 @@ export default function ImageSearchOverview() {
             subtitle="Challenges encountered"
           />
 
-          <p className="text-neutral-300 leading-relaxed mb-6">
+          <p className="text-black leading-relaxed mb-6">
             Initial versions suffered from excessive API calls and slow image
             loading, leading to poor user experience and hitting rate limits.
           </p>
 
-          <ul className="list-disc list-inside text-neutral-400 space-y-2">
+          <ul className="list-disc list-inside text-black space-y-2">
             <li>Too many API calls without debouncing</li>
             <li>Loading all images at once caused slowdowns</li>
             <li>No error handling for failed API requests</li>
           </ul>
 
-          <p className="text-neutral-300 leading-relaxed mt-6">
+          <p className="text-black leading-relaxed mt-6">
             These issues were resolved by implementing debouncing, lazy loading,
             and proper error boundaries.
           </p>
@@ -208,12 +208,12 @@ export default function ImageSearchOverview() {
             subtitle="Enhancing the search experience"
           />
 
-          <p className="text-neutral-300 leading-relaxed mb-6">
+          <p className="text-black leading-relaxed mb-6">
             Future improvements could include advanced filters, image collections,
             and offline support.
           </p>
 
-          <ul className="list-disc list-inside text-neutral-400 space-y-2">
+          <ul className="list-disc list-inside text-black space-y-2">
             <li>Advanced filters (color, orientation, size)</li>
             <li>User collections and favorites</li>
             <li>Offline caching with service workers</li>

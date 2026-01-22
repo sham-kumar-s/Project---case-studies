@@ -21,7 +21,7 @@ export default function CaseStudiesLayout({
       {currentProject && (
         <div className="w-full border-b border-gray-200 bg-white px-10 py-12">
           <div className="max-w-7xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text">
               {currentProject.title}
             </h1>
             <p className="text-lg text-neutral-600 mb-6 max-w-3xl">

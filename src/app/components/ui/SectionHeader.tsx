@@ -7,9 +7,9 @@ export default function SectionHeader({
 }) {
   return (
     <div className="mb-8">
-      <h1 className="text-2xl font-bold">{title}</h1>
+      <h1 className="text-2xl font-bold text-black">{title}</h1>
       {subtitle && (
-        <p className="mt-1 text-sm text-neutral-400">
+        <p className="mt-1 text-sm text-gray-600">
           {subtitle}
         </p>
       )}
