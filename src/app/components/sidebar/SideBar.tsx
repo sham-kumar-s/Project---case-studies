@@ -46,7 +46,7 @@ export default function Sidebar() {
   return (
     <aside
       ref={sidebarRef}
-      className="w-72 border-r border-neutral-800 bg-neutral-900 flex flex-col sticky top-0 h-screen overflow-y-auto"
+      className="w-72 border-r border-gray-200 bg-gray-50 flex flex-col sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto"
     >
       <div className="px-6 py-8">
         <div className="relative mb-6">
@@ -54,18 +54,18 @@ export default function Sidebar() {
             onClick={() => setIsOpen(!isOpen)}
             className="flex items-center justify-between w-full text-left group"
           >
-            <span className="text-lg font-semibold text-white group-hover:text-neutral-200 transition-colors">
+            <span className="text-lg font-semibold text-neutral-900 group-hover:text-blue-600 transition-colors">
               {displayName}
             </span>
             <ChevronDown
-              className={`w-5 h-5 text-neutral-400 transition-transform duration-200 ${
+              className={`w-5 h-5 text-neutral-500 transition-transform duration-200 ${
                 isOpen ? "rotate-180" : ""
               }`}
             />
           </button>
 
           {isOpen && (
-            <div className="absolute top-full left-0 w-full mt-2 py-1 bg-neutral-800 border border-neutral-700 rounded-lg shadow-xl z-50 overflow-hidden">
+            <div className="absolute top-full left-0 w-full mt-2 py-1 bg-white border border-gray-200 rounded-lg shadow-xl z-50 overflow-hidden">
               {PROJECTS.map((project) => (
                 <Link
                   key={project.slug}
@@ -73,8 +73,8 @@ export default function Sidebar() {
                   onClick={() => setIsOpen(false)}
                   className={`block px-4 py-2.5 text-sm transition-colors ${
                     project.slug === projectSlug
-                      ? "bg-neutral-700/50 text-white font-medium"
-                      : "text-neutral-400 hover:text-white hover:bg-neutral-700"
+                      ? "bg-blue-50 text-blue-700 font-medium"
+                      : "text-neutral-600 hover:text-neutral-900 hover:bg-gray-50"
                   }`}
                 >
                   {project.name}
@@ -84,7 +84,7 @@ export default function Sidebar() {
           )}
         </div>
 
-        <div className="h-px bg-neutral-800 mb-6" />
+        <div className="h-px bg-gray-200 mb-6" />
 
         {/* CONTENT Heading */}
         <div className="mb-4">
@@ -93,7 +93,7 @@ export default function Sidebar() {
           </h3>
         </div>
 
-        <div className="h-px bg-neutral-800 mb-4" />
+        <div className="h-px bg-gray-200 mb-4" />
 
         {/* Sections Navigation */}
         <nav className="space-y-1">
@@ -118,8 +118,8 @@ export default function Sidebar() {
                 onClick={handleClick}
                 className={`block px-3 py-2 text-sm rounded-md transition-all ${
                   isActive
-                    ? "bg-neutral-800 text-white font-medium border-l-2 border-blue-500"
-                    : "text-neutral-400 hover:text-white hover:bg-neutral-800/50"
+                    ? "bg-white text-blue-700 font-medium border border-gray-200 shadow-sm"
+                    : "text-neutral-600 hover:text-neutral-900 hover:bg-gray-100"
                 }`}
               >
                 {section.title}

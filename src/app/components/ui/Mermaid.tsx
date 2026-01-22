@@ -1,64 +1,67 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import mermaid from "mermaid";
+import { useEffect, useRef, useState } from "react";
 
 interface MermaidProps {
   chart: string;
 }
 
-mermaid.initialize({
-  startOnLoad: true,
-  theme: "dark",
-  securityLevel: "loose",
-  fontFamily: "inherit",
-  themeVariables: {
-    primaryColor: "#3b82f6",
-    primaryTextColor: "#fff",
-    primaryBorderColor: "#3b82f6",
-    lineColor: "#6b7280",
-    secondaryColor: "#1f2937",
-    tertiaryColor: "#111827",
-    fontSize: "16px",
-  },
-  flowchart: {
-    padding: 20,
-    nodeSpacing: 50,
-    rankSpacing: 50,
-    htmlLabels: true,
-    curve: "basis",
-  },
-});
-
 export default function Mermaid({ chart }: MermaidProps) {
   const ref = useRef<HTMLDivElement>(null);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    if (ref.current) {
-      mermaid.contentLoaded();
-      // We need to force a re-render because mermaid's contentLoaded 
-      // might not catch dynamically added content in some Next.js scenarios
-      const renderChart = async () => {
-        try {
+    const initMermaid = async () => {
+      try {
+        const mermaid = (await import("mermaid")).default;
+        
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: "base", // Use base theme for better customizability
+          securityLevel: "loose",
+          fontFamily: "inherit",
+          themeVariables: {
+            primaryColor: "#3b82f6",
+            primaryTextColor: "#171717", // neutral-900
+            primaryBorderColor: "#3b82f6",
+            lineColor: "#525252", // neutral-600
+            secondaryColor: "#e5e7eb", // gray-200
+            tertiaryColor: "#f9fafb", // gray-50
+            fontSize: "16px",
+          },
+          flowchart: {
+            padding: 20,
+            nodeSpacing: 50,
+            rankSpacing: 50,
+            htmlLabels: true,
+            curve: "basis",
+          },
+        });
+
+        if (ref.current) {
           const { svg } = await mermaid.render(
             `mermaid-${Math.floor(Math.random() * 10000)}`,
             chart
           );
-          if (ref.current) {
-            ref.current.innerHTML = svg;
-          }
-        } catch (error) {
-          console.error("Mermaid render error:", error);
+          ref.current.innerHTML = svg;
+          setIsLoaded(true);
         }
-      };
-      renderChart();
-    }
+      } catch (error) {
+        console.error("Mermaid loading/render error:", error);
+      }
+    };
+
+    initMermaid();
   }, [chart]);
 
   return (
-    <div className="flex justify-center my-10 p-6 bg-neutral-900/50 rounded-2xl border border-neutral-800 overflow-x-auto">
-      <div ref={ref} className="mermaid">
-        {chart}
+    <div className="flex justify-center my-10 p-6 bg-gray-50 rounded-2xl border border-gray-200 overflow-x-auto shadow-sm">
+      <div 
+        ref={ref} 
+        className={`mermaid transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+      >
+        {/* Placeholder while loading to prevent layout shift */}
+        {!isLoaded && <div className="h-48 w-full animate-pulse bg-gray-200 rounded-lg"></div>}
       </div>
     </div>
   );

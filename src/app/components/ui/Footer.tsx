@@ -42,7 +42,7 @@ const LinkedInIcon = ({ size = 24, className = "" }) => (
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-16 px-4 font-inter border-t border-gray-800">
+    <footer className="bg-gray-50 text-neutral-900 py-16 px-4 font-inter border-t border-gray-200">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
         <div className="space-y-4">
           <div className="flex items-center space-x-2">
@@ -174,40 +174,40 @@ const Footer = () => {
                 </filter>
               </defs>
             </svg>
-            <h3 className="text-3xl font-extrabold text-white">SeraUI</h3>
+            <h3 className="text-3xl font-extrabold text-neutral-900">SeraUI</h3>
           </div>
-          <p className="text-gray-400 text-sm leading-relaxed">
+          <p className="text-neutral-500 text-sm leading-relaxed">
             Innovating for a better tomorrow. We are committed to delivering
             high-quality solutions that empower businesses and individuals.
           </p>
           <div className="flex space-x-5 pt-2">
             <a
               href="#"
-              className="text-gray-500 hover:text-white transition-transform transform hover:scale-110"
+              className="text-neutral-400 hover:text-blue-600 transition-transform transform hover:scale-110"
             >
               <GitHubIcon size={28} />
             </a>
             <a
               href="#"
-              className="text-gray-500 hover:text-white transition-transform transform hover:scale-110"
+              className="text-neutral-400 hover:text-blue-600 transition-transform transform hover:scale-110"
             >
               <TwitterIcon size={28} />
             </a>
             <a
               href="#"
-              className="text-gray-500 hover:text-white transition-transform transform hover:scale-110"
+              className="text-neutral-400 hover:text-blue-600 transition-transform transform hover:scale-110"
             >
               <LinkedInIcon size={28} />
             </a>
           </div>
         </div>
         <div className="space-y-4">
-          <h3 className="text-xl font-bold text-white">Quick Links</h3>
+          <h3 className="text-xl font-bold text-neutral-900">Quick Links</h3>
           <ul className="space-y-3">
             <li>
               <a
                 href="#"
-                className="text-gray-400 hover:text-white transition-colors duration-300"
+                className="text-neutral-500 hover:text-blue-600 transition-colors duration-300"
               >
                 Home
               </a>
@@ -215,7 +215,7 @@ const Footer = () => {
             <li>
               <a
                 href="#"
-                className="text-gray-400 hover:text-white transition-colors duration-300"
+                className="text-neutral-500 hover:text-blue-600 transition-colors duration-300"
               >
                 About Us
               </a>
@@ -223,7 +223,7 @@ const Footer = () => {
             <li>
               <a
                 href="#"
-                className="text-gray-400 hover:text-white transition-colors duration-300"
+                className="text-neutral-500 hover:text-blue-600 transition-colors duration-300"
               >
                 Services
               </a>
@@ -231,7 +231,7 @@ const Footer = () => {
             <li>
               <a
                 href="#"
-                className="text-gray-400 hover:text-white transition-colors duration-300"
+                className="text-neutral-500 hover:text-blue-600 transition-colors duration-300"
               >
                 Portfolio
               </a>
@@ -239,7 +239,7 @@ const Footer = () => {
             <li>
               <a
                 href="#"
-                className="text-gray-400 hover:text-white transition-colors duration-300"
+                className="text-neutral-500 hover:text-blue-600 transition-colors duration-300"
               >
                 Blog
               </a>
@@ -247,12 +247,12 @@ const Footer = () => {
           </ul>
         </div>
         <div className="space-y-4">
-          <h3 className="text-xl font-bold text-white">Resources & Support</h3>
+          <h3 className="text-xl font-bold text-neutral-900">Resources & Support</h3>
           <ul className="space-y-3">
             <li>
               <a
                 href="#"
-                className="text-gray-400 hover:text-white transition-colors duration-300"
+                className="text-neutral-500 hover:text-blue-600 transition-colors duration-300"
               >
                 Support
               </a>
@@ -260,7 +260,7 @@ const Footer = () => {
             <li>
               <a
                 href="#"
-                className="text-gray-400 hover:text-white transition-colors duration-300"
+                className="text-neutral-500 hover:text-blue-600 transition-colors duration-300"
               >
                 FAQs
               </a>
@@ -268,7 +268,7 @@ const Footer = () => {
             <li>
               <a
                 href="#"
-                className="text-gray-400 hover:text-white transition-colors duration-300"
+                className="text-neutral-500 hover:text-blue-600 transition-colors duration-300"
               >
                 Privacy Policy
               </a>
@@ -276,7 +276,7 @@ const Footer = () => {
             <li>
               <a
                 href="#"
-                className="text-gray-400 hover:text-white transition-colors duration-300"
+                className="text-neutral-500 hover:text-blue-600 transition-colors duration-300"
               >
                 Terms of Service
               </a>
@@ -284,7 +284,7 @@ const Footer = () => {
             <li>
               <a
                 href="#"
-                className="text-gray-400 hover:text-white transition-colors duration-300"
+                className="text-neutral-500 hover:text-blue-600 transition-colors duration-300"
               >
                 Careers
               </a>
@@ -292,7 +292,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="text-center text-gray-500 text-sm pt-10 mt-10 border-t border-gray-800">
+      <div className="text-center text-neutral-400 text-sm pt-10 mt-10 border-t border-gray-200">
         <p>
           &copy; {new Date().getFullYear()} Your Brand. All rights reserved.
         </p>

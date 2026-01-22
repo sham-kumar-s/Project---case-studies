@@ -121,7 +121,7 @@ export default function MagicBento({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className={clsx(
-        "relative group overflow-hidden rounded-[40px] border border-neutral-800 bg-neutral-900 transition-all duration-500",
+        "relative group overflow-hidden rounded-[40px] border border-gray-100 bg-white transition-all duration-500 shadow-sm",
         enableBorderGlow && "hover:border-transparent",
         className
       )}
@@ -149,7 +149,7 @@ export default function MagicBento({
           style={{
             width: spotlightRadius,
             height: spotlightRadius,
-            background: `radial-gradient(circle, rgba(${glowColor}, 0.25) 0%, transparent 70%)`,
+            background: `radial-gradient(circle, rgba(${glowColor}, 0.15) 0%, transparent 70%)`,
           }}
         />
       )}
@@ -158,12 +158,12 @@ export default function MagicBento({
       <div ref={particlesRef} className="absolute inset-0 z-0 pointer-events-none" />
 
       {/* Content Layer */}
-      <div className="relative z-10 h-full w-full flex items-center justify-center text-center p-6">
+      <div className="relative z-10 h-full w-full flex items-center justify-center text-center p-6 pointer-events-auto">
         {children}
       </div>
 
       {/* Subtle Inner Shadow */}
-      <div className="absolute inset-0 pointer-events-none rounded-[40px] shadow-[inset_0_0_40px_rgba(0,0,0,0.5)]" />
+      <div className="absolute inset-0 pointer-events-none rounded-[40px] shadow-[inset_0_0_20px_rgba(0,0,0,0.05)]" />
     </div>
   );
 }

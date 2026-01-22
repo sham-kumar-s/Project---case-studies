@@ -11,23 +11,23 @@ interface CalloutProps {
 
 const styles = {
   "trade-off": {
-    container: "bg-amber-500/10 border-amber-500/20 text-amber-200",
-    icon: <AlertTriangle className="w-5 h-5 text-amber-500" />,
+    container: "bg-amber-50 border-amber-200 text-amber-900",
+    icon: <AlertTriangle className="w-5 h-5 text-amber-600" />,
     defaultTitle: "Trade-off",
   },
   decision: {
-    container: "bg-emerald-500/10 border-emerald-500/20 text-emerald-200",
-    icon: <CheckCircle2 className="w-5 h-5 text-emerald-500" />,
+    container: "bg-emerald-50 border-emerald-200 text-emerald-900",
+    icon: <CheckCircle2 className="w-5 h-5 text-emerald-600" />,
     defaultTitle: "Decision",
   },
   info: {
-    container: "bg-blue-500/10 border-blue-500/20 text-blue-200",
-    icon: <Info className="w-5 h-5 text-blue-500" />,
+    container: "bg-blue-50 border-blue-200 text-blue-900",
+    icon: <Info className="w-5 h-5 text-blue-600" />,
     defaultTitle: "Note",
   },
   tip: {
-    container: "bg-purple-500/10 border-purple-500/20 text-purple-200",
-    icon: <Lightbulb className="w-5 h-5 text-purple-500" />,
+    container: "bg-purple-50 border-purple-200 text-purple-900",
+    icon: <Lightbulb className="w-5 h-5 text-purple-600" />,
     defaultTitle: "Tip",
   },
 };

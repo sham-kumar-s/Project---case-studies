@@ -16,15 +16,15 @@ export default function CaseStudiesLayout({
   const currentProject = CASE_STUDIES.find((p) => p.slug === projectSlug);
 
   return (
-    <div className="min-h-screen bg-neutral-950">
+    <div className="min-h-screen bg-white">
       {/* Project Header Section */}
       {currentProject && (
-        <div className="w-full border-b border-neutral-800 bg-neutral-950 px-10 py-12">
+        <div className="w-full border-b border-gray-200 bg-white px-10 py-12">
           <div className="max-w-7xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
               {currentProject.title}
             </h1>
-            <p className="text-lg text-neutral-400 mb-6 max-w-3xl">
+            <p className="text-lg text-neutral-600 mb-6 max-w-3xl">
               {currentProject.description}
             </p>
             
@@ -33,7 +33,7 @@ export default function CaseStudiesLayout({
               {currentProject.techStack?.map((tech) => (
                 <span
                   key={tech}
-                  className="px-4 py-1.5 bg-neutral-800 text-neutral-300 text-sm rounded-full border border-neutral-700 hover:border-neutral-600 transition-colors"
+                  className="px-4 py-1.5 bg-gray-100 text-neutral-700 text-sm rounded-full border border-gray-200 hover:border-gray-300 transition-colors"
                 >
                   {tech}
                 </span>

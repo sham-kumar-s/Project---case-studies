@@ -6,6 +6,15 @@ export const metadata = {
   description: "Engineering case studies and system design deep dives",
 };
 
+import { Manrope } from "next/font/google";
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  display: "swap",
+});
+
+import AppNavbar from "@/app/components/ui/Navbar";
+
 export default function RootLayout({
   children,
 }: {
@@ -13,7 +22,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-neutral-950 text-neutral-100 antialiased">
+      <body className={`${manrope.className} bg-gray-50 text-neutral-900 antialiased`}>
+        <AppNavbar />
         {children}
         <Footer />
       </body>
