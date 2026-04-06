@@ -1,68 +1,72 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 import { CASE_STUDIES } from "@/app/lib/projects";
 import MagicBento from "@/app/components/ui/MagicBento";
 import { FlipWords } from "@/app/components/ui/FlipWords";
+import TechCard from "@/app/components/ui/TechCard";
 
 interface Technology {
   name: string;
   description: string;
-  color: string;
-  gradient: string;
+  category: string;
+  icon: string;
 }
 
 const technologies: Technology[] = [
   {
     name: "Next.js",
     description: "React Framework",
-    color: "#000000",
-    gradient: "from-gray-600 to-gray-900",
+    category: "Frontend",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
   },
   {
     name: "React",
     description: "UI Library",
-    color: "#61DAFB",
-    gradient: "from-blue-400 to-cyan-600",
+    category: "Frontend",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
   },
   {
     name: "Node.js",
     description: "Backend Runtime",
-    color: "#68A063",
-    gradient: "from-green-400 to-emerald-600",
+    category: "Backend",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
   },
   {
     name: "MongoDB",
     description: "NoSQL Database",
-    color: "#13AA52",
-    gradient: "from-green-500 to-teal-700",
+    category: "Database",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
+  },
+  {
+    name: "JavaScript",
+    description: "Web Language",
+    category: "Language",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
   },
   {
     name: "TypeScript",
     description: "Typed JavaScript",
-    color: "#3178C6",
-    gradient: "from-blue-500 to-indigo-700",
+    category: "Language",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
   },
   {
     name: "Java",
     description: "Enterprise Language",
-    color: "#ED8936",
-    gradient: "from-orange-400 to-red-600",
+    category: "Language",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
   },
   {
     name: "PostgreSQL",
     description: "SQL Database",
-    color: "#336791",
-    gradient: "from-blue-600 to-blue-900",
+    category: "Database",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
   },
 ];
 export default function Page() {
-  const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+
 
   const scrollToProjects = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -72,7 +76,7 @@ export default function Page() {
     }
   };
 
-  if (!mounted) return null;
+
 
   return (
     <div className="w-full bg-white min-h-screen flex flex-col items-center justify-center px-4 py-20 overflow-hidden">
@@ -115,45 +119,16 @@ export default function Page() {
         </div>
 
         {/* Technology cards grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 mb-16 border border-gray-200 rounded-2xl p-8 bg-white/50 backdrop-blur-sm">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 mb-16 p-4 md:p-8">
           {technologies.map((tech, index) => (
-            <div
+            <TechCard
               key={tech.name}
-              className="group relative bg-white border border-gray-200 hover:border-blue-200 rounded-xl p-6 cursor-pointer transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 shadow-sm hover:shadow-md"
-              style={{
-                animation: `slideUp 0.6s ease-out ${index * 0.05}s backwards`,
-              }}
-            >
-              {/* Glow effect on hover */}
-              <div
-                className="absolute inset-0 bg-gradient-to-r opacity-0 group-hover:opacity-15 rounded-xl transition-opacity duration-300 blur-xl"
-                style={{
-                  backgroundImage: `linear-gradient(135deg, ${tech.color}40, ${tech.color}20)`,
-                }}
-              />
-
-              {/* Icon/Color indicator */}
-              <div
-                className="w-12 h-12 rounded-lg mb-4 flex items-center justify-center text-white font-bold text-xl"
-                style={{ backgroundColor: "#80C4E9" }}
-              >
-                {tech.name.charAt(0)}
-              </div>
-
-              {/* Content */}
-              <div className="relative z-10 text-left">
-                <h3
-                  className="text-lg md:text-xl font-bold mb-1"
-                  style={{ color: "#80C4E9" }}
-                >
-                  {tech.name}
-                </h3>
-                <p className="text-sm text-gray-500">{tech.description}</p>
-              </div>
-
-              {/* Border animation */}
-              <div className="absolute inset-0 rounded-xl border border-transparent group-hover:border-blue-500/30 transition-all duration-300 pointer-events-none" />
-            </div>
+              name={tech.name}
+              description={tech.description}
+              category={tech.category}
+              icon={tech.icon}
+              index={index}
+            />
           ))}
         </div>
 
@@ -163,11 +138,11 @@ export default function Page() {
             <div className="text-4xl md:text-5xl mb-4">⚡</div>
             <h4
               className="text-lg font-semibold mb-2"
-              style={{ color: "#80C4E9" }}
+              style={{ color: "black" }}
             >
               Lightning Fast
             </h4>
-            <p className="text-gray-500 text-sm md:text-base">
+            <p className="text-sm md:text-base" style={{ color: "#363636" }}>
               Optimized for performance and scalability across all platforms
             </p>
           </div>
@@ -175,11 +150,11 @@ export default function Page() {
             <div className="text-4xl md:text-5xl mb-4">🔒</div>
             <h4
               className="text-lg font-semibold mb-2"
-              style={{ color: "#80C4E9" }}
+              style={{ color: "black" }}
             >
               Enterprise Secure
             </h4>
-            <p className="text-gray-500 text-sm md:text-base">
+            <p className="text-sm md:text-base" style={{ color: "#363636" }}>
               Industry-leading security standards and best practices
             </p>
           </div>
@@ -187,11 +162,11 @@ export default function Page() {
             <div className="text-4xl md:text-5xl mb-4">📈</div>
             <h4
               className="text-lg font-semibold mb-2"
-              style={{ color: "#80C4E9" }}
+              style={{ color: "black" }}
             >
               Infinitely Scalable
             </h4>
-            <p className="text-gray-500 text-sm md:text-base">
+            <p className="text-sm md:text-base" style={{ color: "#363636" }}>
               Grow from startup to enterprise without compromise
             </p>
           </div>
@@ -207,10 +182,10 @@ export default function Page() {
         className="relative z-10 w-full max-w-6xl mx-auto mt-32 scroll-mt-20 border border-gray-200 rounded-2xl p-8 md:p-12 bg-white/50 backdrop-blur-sm"
       >
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold mb-6" style={{ color: "#80C4E9" }}>
+          <h2 className="text-5xl font-bold mb-6" style={{ color: "black" }}>
             Case Studies
           </h2>
-          <p className="max-w-2xl mx-auto text-lg text-gray-500 leading-relaxed">
+          <p className="max-w-2xl mx-auto text-lg leading-relaxed" style={{ color: "#363636" }}>
             Deep dives into real-world engineering problems, system design
             decisions, trade-offs, failures, and improvements. Each case study
             documents how a production-grade system is designed and evolved.
@@ -241,11 +216,11 @@ export default function Page() {
                 <div className="p-6">
                   <h2
                     className="text-xl font-bold mb-2 transition-colors"
-                    style={{ color: "#80C4E9" }}
+                    style={{ color: "black" }}
                   >
                     {project.title}
                   </h2>
-                  <p className="text-gray-500 text-sm leading-relaxed line-clamp-3">
+                  <p className="text-sm leading-relaxed line-clamp-3" style={{ color: "#363636" }}>
                     {project.description}
                   </p>
                 </div>

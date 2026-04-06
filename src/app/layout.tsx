@@ -22,6 +22,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+      </head>
       <body className={`${manrope.className} bg-gray-50 text-neutral-900 antialiased`} suppressHydrationWarning>
         <AppNavbar />
         {children}

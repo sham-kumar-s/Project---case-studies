@@ -4,14 +4,28 @@ export const CASE_STUDIES = [
     slug: "room-booking",
     description:
       "A scalable room booking system with real-time availability and conflict handling.",
-    techStack: ["Next.js", "React", "Node.js", "MongoDB", "WebSockets", "Redis"],
+    techStack: [
+      "Next.js",
+      "React",
+      "Node.js",
+      "MongoDB",
+      "WebSockets",
+      "Redis",
+    ],
   },
   {
     title: "Summon.fun",
     slug: "summon-fun",
     description:
       "A Web3 interactive platform focused on wallet-based actions and on-chain UX.",
-    techStack: ["React", "Next.js", "MetaMask", "WalletConnect", "EVM", "Node.js"],
+    techStack: [
+      "React",
+      "Next.js",
+      "MetaMask",
+      "WalletConnect",
+      "EVM",
+      "Node.js",
+    ],
   },
   {
     title: "AIQ Invest",
@@ -26,6 +40,27 @@ export const CASE_STUDIES = [
     description:
       "A frontend-focused image search application optimized for performance and UX.",
     techStack: ["React", "Tailwind CSS", "Netlify"],
+  },
+  {
+    title: "Clinical Management",
+    slug: "clinical-management",
+    description:
+      "A comprehensive healthcare platform with EHR, appointment scheduling, and HIPAA compliance.",
+    techStack: ["React", "Next.js", "Node.js", "PostgreSQL", "Redis"],
+  },
+  {
+    title: "Taxi Booking",
+    slug: "taxi-booking",
+    description:
+      "A real-time ride-hailing platform with geolocation, dynamic pricing, and driver matching.",
+    techStack: [
+      "React Native",
+      "Next.js",
+      "Node.js",
+      "PostgreSQL",
+      "MongoDB",
+      "Redis",
+    ],
   },
 ];
 

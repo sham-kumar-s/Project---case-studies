@@ -174,7 +174,7 @@ const Footer = () => {
                 </filter>
               </defs>
             </svg>
-            <h3 className="text-3xl font-extrabold text-neutral-900">SeraUI</h3>
+            <h3 className="text-3xl font-extrabold text-neutral-900">Sham</h3>
           </div>
           <p className="text-neutral-500 text-sm leading-relaxed">
             Innovating for a better tomorrow. We are committed to delivering
@@ -247,14 +247,14 @@ const Footer = () => {
           </ul>
         </div>
         <div className="space-y-4">
-          <h3 className="text-xl font-bold text-neutral-900">Resources & Support</h3>
+          <h3 className="text-xl font-bold text-neutral-900">Explore</h3>
           <ul className="space-y-3">
             <li>
               <a
                 href="#"
                 className="text-neutral-500 hover:text-blue-600 transition-colors duration-300"
               >
-                Support
+                Resume
               </a>
             </li>
             <li>
@@ -262,7 +262,7 @@ const Footer = () => {
                 href="#"
                 className="text-neutral-500 hover:text-blue-600 transition-colors duration-300"
               >
-                FAQs
+                Experience
               </a>
             </li>
             <li>
@@ -270,7 +270,7 @@ const Footer = () => {
                 href="#"
                 className="text-neutral-500 hover:text-blue-600 transition-colors duration-300"
               >
-                Privacy Policy
+                Skills
               </a>
             </li>
             <li>
@@ -278,7 +278,7 @@ const Footer = () => {
                 href="#"
                 className="text-neutral-500 hover:text-blue-600 transition-colors duration-300"
               >
-                Terms of Service
+                Certifications
               </a>
             </li>
             <li>
@@ -286,7 +286,7 @@ const Footer = () => {
                 href="#"
                 className="text-neutral-500 hover:text-blue-600 transition-colors duration-300"
               >
-                Careers
+                Achievements
               </a>
             </li>
           </ul>

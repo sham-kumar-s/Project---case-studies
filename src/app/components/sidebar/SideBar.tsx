@@ -23,6 +23,8 @@ export default function Sidebar() {
     { name: "Room Booking", slug: "room-booking" },
     { name: "Summon.fun", slug: "summon-fun" },
     { name: "Image Search", slug: "image-search" },
+    { name: "Clinical Management", slug: "clinical-management" },
+    { name: "Taxi Booking", slug: "taxi-booking" },
   ];
 
   const currentProject = PROJECTS.find((p) => p.slug === projectSlug);

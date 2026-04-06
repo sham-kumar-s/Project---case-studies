@@ -185,7 +185,7 @@ export const NavbarLogo = () => {
       <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-neutral-900 text-white font-bold">
         S
       </div>
-      <span className="text-lg font-bold">SeraUI</span>
+      <span className="text-lg font-bold">Sham</span>
     </Link>
   );
 };
@@ -197,8 +197,8 @@ export default function AppNavbar() {
   const navItems = [
     { name: "Home", link: "/" },
     { name: "Projects", link: "/#our-projects" },
-    { name: "Services", link: "#" },
-    { name: "About", link: "#" },
+    { name: "Services", link: "/services" },
+    { name: "About", link: "/about" },
   ];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -215,7 +215,7 @@ export default function AppNavbar() {
         {/* Right Side: Contact Button & Mobile Toggle */}
         <div className="flex items-center gap-4">
           <Link 
-            href="#contact" 
+            href="/contact" 
             className="hidden md:inline-flex px-5 py-2 rounded-full bg-neutral-900 text-white text-sm font-medium hover:bg-neutral-800 transition-colors shadow-sm"
           >
             Contact Us
@@ -246,7 +246,7 @@ export default function AppNavbar() {
           ))}
           <div className="pt-2 mt-2 border-t border-gray-100">
              <Link 
-              href="#contact" 
+              href="/contact" 
               onClick={() => setIsMobileMenuOpen(false)}
               className="block w-full text-center px-4 py-3 text-sm font-bold text-white bg-neutral-900 rounded-lg hover:bg-neutral-800 transition-colors"
             >
