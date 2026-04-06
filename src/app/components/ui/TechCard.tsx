@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 interface TechCardProps {
   name: string;
@@ -40,6 +39,7 @@ export default function TechCard({ name, description, category, icon, index }: T
             src={icon} 
             alt={`${name} logo`}
             className="w-full h-full object-contain"
+            loading="lazy"
           />
         </motion.div>
 

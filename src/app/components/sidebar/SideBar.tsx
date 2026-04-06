@@ -43,8 +43,6 @@ export default function Sidebar() {
   // Safety check
   if (!projectSlug) return null;
 
-  const basePath = `/case-studies/${projectSlug}`;
-
   return (
     <aside
       ref={sidebarRef}

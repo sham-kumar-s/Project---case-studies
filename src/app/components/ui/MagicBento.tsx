@@ -22,13 +22,13 @@ interface MagicBentoProps {
 
 export default function MagicBento({
   children,
-  textAutoHide = true,
+  textAutoHide: _textAutoHide = true,
   enableStars = true,
   enableSpotlight = true,
   enableBorderGlow = true,
-  enableTilt = false,
-  enableMagnetism = false,
-  clickEffect = true,
+  enableTilt: _enableTilt = false,
+  enableMagnetism: _enableMagnetism = false,
+  clickEffect: _clickEffect = true,
   spotlightRadius = 400,
   particleCount = 12,
   glowColor = "132, 0, 255",

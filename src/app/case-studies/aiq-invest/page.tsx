@@ -95,7 +95,7 @@ export default function AIQOverview() {
 
           <p className="text-black leading-relaxed mb-6">
             The data model is designed around users, portfolios, assets, and
-            transactions. PostgreSQL's relational structure ensures data integrity
+            transactions. PostgreSQL&apos;s relational structure ensures data integrity
             and supports complex queries for analytics.
           </p>
 

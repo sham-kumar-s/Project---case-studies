@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Code, Smartphone, Headphones, Search, Palette, Zap } from "lucide-react";
 import PageTransition from "@/app/components/animations/PageTransition";
