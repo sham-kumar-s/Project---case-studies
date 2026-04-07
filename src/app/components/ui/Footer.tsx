@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Github, Linkedin, Instagram, Send } from "lucide-react";
 
 const XIcon = ({ size = 24, className = "" }) => (
@@ -87,44 +88,44 @@ const Footer = () => {
           <h3 className="text-xl font-bold text-neutral-900">Quick Links</h3>
           <ul className="space-y-3">
             <li>
-              <a
+              <Link
                 href="/"
                 className="text-neutral-500 hover:text-blue-600 transition-colors duration-300"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/about"
                 className="text-neutral-500 hover:text-blue-600 transition-colors duration-300"
               >
                 About Us
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/services"
                 className="text-neutral-500 hover:text-blue-600 transition-colors duration-300"
               >
                 Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/case-studies"
                 className="text-neutral-500 hover:text-blue-600 transition-colors duration-300"
               >
                 Portfolio
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/contact"
                 className="text-neutral-500 hover:text-blue-600 transition-colors duration-300"
               >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -144,36 +145,36 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a
+              <Link
                 href="/experience"
                 className="text-neutral-500 hover:text-blue-600 transition-colors duration-300"
               >
                 Experience
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/skills"
                 className="text-neutral-500 hover:text-blue-600 transition-colors duration-300"
               >
                 Skills
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/case-studies"
                 className="text-neutral-500 hover:text-blue-600 transition-colors duration-300"
               >
                 Certifications
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/achievements"
                 className="text-neutral-500 hover:text-blue-600 transition-colors duration-300"
               >
                 Achievements
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
