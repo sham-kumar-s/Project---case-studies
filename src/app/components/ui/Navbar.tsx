@@ -217,14 +217,26 @@ export default function AppNavbar() {
           <NavItems items={navItems} />
         </div>
 
-        {/* Right Side: Contact Button & Mobile Toggle */}
-        <div className="flex items-center gap-4">
+        {/* Right Side: Resume & Contact Buttons & Mobile Toggle */}
+        <div className="flex items-center gap-3">
+          
           <Link 
             href="/contact" 
             className="hidden md:inline-flex px-5 py-2 rounded-full bg-neutral-900 text-white text-sm font-medium hover:bg-neutral-800 transition-colors shadow-sm"
           >
             Contact Us
           </Link>
+
+          <a 
+            href="/resume.pdf" 
+            download
+            className="hidden md:inline-flex items-center gap-2 px-5 py-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-medium hover:from-blue-700 hover:to-purple-700 transition-all shadow-sm hover:shadow-md"
+          >
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            Resume
+          </a>
 
           {/* Mobile Toggle */}
           <MobileNav>
@@ -249,8 +261,20 @@ export default function AppNavbar() {
               {item.name}
             </Link>
           ))}
-          <div className="pt-2 mt-2 border-t border-gray-100">
-             <Link 
+          <div className="pt-2 mt-2 border-t border-gray-100 space-y-2">
+            <a 
+              href="/resume.pdf" 
+              download
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="flex items-center justify-center gap-2 w-full px-4 py-3 text-sm font-bold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all"
+            >
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Download Resume
+            </a>
+            
+            <Link 
               href="/contact" 
               onClick={() => setIsMobileMenuOpen(false)}
               className="block w-full text-center px-4 py-3 text-sm font-bold text-white bg-neutral-900 rounded-lg hover:bg-neutral-800 transition-colors"

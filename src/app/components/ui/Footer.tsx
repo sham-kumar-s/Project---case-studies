@@ -88,7 +88,7 @@ const Footer = () => {
           <ul className="space-y-3">
             <li>
               <a
-                href="#"
+                href="/"
                 className="text-neutral-500 hover:text-blue-600 transition-colors duration-300"
               >
                 Home
@@ -96,7 +96,7 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="/about"
                 className="text-neutral-500 hover:text-blue-600 transition-colors duration-300"
               >
                 About Us
@@ -104,7 +104,7 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="/services"
                 className="text-neutral-500 hover:text-blue-600 transition-colors duration-300"
               >
                 Services
@@ -112,7 +112,7 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="/case-studies"
                 className="text-neutral-500 hover:text-blue-600 transition-colors duration-300"
               >
                 Portfolio
@@ -120,10 +120,10 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="/contact"
                 className="text-neutral-500 hover:text-blue-600 transition-colors duration-300"
               >
-                Blog
+                Contact
               </a>
             </li>
           </ul>
@@ -133,15 +133,19 @@ const Footer = () => {
           <ul className="space-y-3">
             <li>
               <a
-                href="#"
-                className="text-neutral-500 hover:text-blue-600 transition-colors duration-300"
+                href="/resume.pdf"
+                download
+                className="text-neutral-500 hover:text-blue-600 transition-colors duration-300 flex items-center gap-2"
               >
                 Resume
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
               </a>
             </li>
             <li>
               <a
-                href="#"
+                href="/experience"
                 className="text-neutral-500 hover:text-blue-600 transition-colors duration-300"
               >
                 Experience
@@ -149,7 +153,7 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="/skills"
                 className="text-neutral-500 hover:text-blue-600 transition-colors duration-300"
               >
                 Skills
@@ -157,7 +161,7 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="/case-studies"
                 className="text-neutral-500 hover:text-blue-600 transition-colors duration-300"
               >
                 Certifications
@@ -165,7 +169,7 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="/achievements"
                 className="text-neutral-500 hover:text-blue-600 transition-colors duration-300"
               >
                 Achievements

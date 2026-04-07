@@ -96,16 +96,17 @@ export default function Page() {
             <br />
             <FlipWords
               words={[
-                "amazing experiences",
-                "web applications",
-                "stunning designs",
+                "Mobile applications",
+                "Web applications",
+                "Logo designs",
+                "SEO optimization",
+
               ]}
               className="text-blue-600 dark:text-blue-600"
             />
           </div>
           <div className="text-base sm:text-lg md:text-xl lg:text-2xl text-neutral-500 mb-8 max-w-3xl mx-auto">
-            A powerful and customizable text animation component with smooth
-            transitions
+            Your dream, my responsibility to turn it into reality
           </div>
           <div className="flex items-center justify-center gap-4 flex-wrap">
             <a
@@ -119,7 +120,7 @@ export default function Page() {
         </div>
 
         {/* Technology cards grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 mb-16 p-4 md:p-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 p-4 md:p-8">
           {technologies.map((tech, index) => (
             <TechCard
               key={tech.name}
@@ -172,8 +173,6 @@ export default function Page() {
           </div>
         </div>
 
-        {/* Footer CTA */}
-        <div className="mt-12 md:mt-16 text-center pt-8 border-t border-gray-200"></div>
       </div>
 
       {/* Our Projects Section */}
