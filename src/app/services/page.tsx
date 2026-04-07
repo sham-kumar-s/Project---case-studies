@@ -26,7 +26,7 @@ const services: Service[] = [
       "Progressive Web Apps (PWA)",
       "API development & integration",
     ],
-    image: "/Web Development.jfif",
+    image: "/Web Development.jpg",
   },
   {
     icon: <Smartphone className="w-8 h-8" />,
