@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import { CASE_STUDIES } from "@/app/lib/projects";
 import ProjectCard from "@/app/components/ui/ProjectCard";
 import { FlipWords } from "@/app/components/ui/FlipWords";
@@ -191,24 +190,19 @@ export default function Page() {
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-10 max-w-4xl w-full mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
           {CASE_STUDIES.map((project) => (
-            <Link
+            <ProjectCard
               key={project.slug}
-              href={`/case-studies/${project.slug}`}
-              className="block w-full sm:w-[calc(50%-1.25rem)] lg:w-[calc(33.333%-1.67rem)] aspect-[4/3]"
-            >
-              <ProjectCard className="h-full w-full">
-                <div className="p-6 flex flex-col justify-center h-full">
-                  <h2 className="text-xl font-bold mb-2 text-black transition-colors hover:text-blue-600">
-                    {project.title}
-                  </h2>
-                  <p className="text-sm leading-relaxed line-clamp-3 text-gray-600">
-                    {project.description}
-                  </p>
-                </div>
-              </ProjectCard>
-            </Link>
+              title={project.title}
+              slug={project.slug}
+              description={project.description}
+              techStack={project.techStack}
+              liveUrl={project.liveUrl}
+              githubUrl={project.githubUrl}
+              year={project.year}
+              teamSize={project.teamSize}
+            />
           ))}
         </div>
       </div>

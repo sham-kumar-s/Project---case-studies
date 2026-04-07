@@ -151,7 +151,11 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
                 src={service.image}
                 alt={service.title}
                 fill
-                className={`transform group-hover:scale-105 transition-transform duration-500 ${service.title === "App Development" ? "object-contain p-4" : "object-cover"}`} 
+                className={`transform group-hover:scale-105 transition-transform duration-500 ${
+                  service.title === "App Development" || service.title === "Logo Designing" 
+                    ? "object-contain p-4" 
+                    : "object-cover"
+                }`}
                 sizes="(max-width: 768px) 100vw, 40vw"
               />
             </div>

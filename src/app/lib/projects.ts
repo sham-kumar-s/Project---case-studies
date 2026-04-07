@@ -12,6 +12,10 @@ export const CASE_STUDIES = [
       "WebSockets",
       "Redis",
     ],
+    liveUrl: "https://react-project-room-searching-app.vercel.app/",
+    githubUrl: "",
+    year: "2024",
+    teamSize: "Solo",
   },
   {
     title: "Summon.fun",
@@ -26,6 +30,10 @@ export const CASE_STUDIES = [
       "EVM",
       "Node.js",
     ],
+    liveUrl: "https://claim.summon.fun/",
+    githubUrl: "",
+    year: "2023",
+    teamSize: "Team of 3",
   },
   {
     title: "AIQ Invest",
@@ -33,6 +41,10 @@ export const CASE_STUDIES = [
     description:
       "A fintech analytics platform providing investment insights and secure dashboards.",
     techStack: ["React", "Next.js", "Node.js", "PostgreSQL"],
+    liveUrl: "https://invest.aiqcapital.io/",
+    githubUrl: "",
+    year: "2023",
+    teamSize: "Team of 4",
   },
   {
     title: "Image Search App",
@@ -40,6 +52,10 @@ export const CASE_STUDIES = [
     description:
       "A frontend-focused image search application optimized for performance and UX.",
     techStack: ["React", "Tailwind CSS", "Netlify"],
+    liveUrl: "https://imagesearching02.netlify.app/",
+    githubUrl: "",
+    year: "2022",
+    teamSize: "Solo",
   },
   {
     title: "Clinical Management",
@@ -47,6 +63,10 @@ export const CASE_STUDIES = [
     description:
       "A comprehensive healthcare platform with EHR, appointment scheduling, and HIPAA compliance.",
     techStack: ["React", "Next.js", "Node.js", "PostgreSQL", "Redis"],
+    liveUrl: "https://hms-nextjs-frontend-app.azurewebsites.net/",
+    githubUrl: "",
+    year: "2023",
+    teamSize: "Team of 5",
   },
   {
     title: "Taxi Booking",
@@ -61,6 +81,10 @@ export const CASE_STUDIES = [
       "MongoDB",
       "Redis",
     ],
+    liveUrl: "https://taxi-booking-sigma.vercel.app/",
+    githubUrl: "",
+    year: "2024",
+    teamSize: "Team of 4",
   },
 ];
 
