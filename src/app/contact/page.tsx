@@ -2,7 +2,20 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Instagram } from "lucide-react";
+
+const XIcon = ({ size = 24, className = "" }: { size?: number; className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={className}
+  >
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
 import PageTransition from "@/app/components/animations/PageTransition";
 
 export default function ContactPage() {
@@ -155,24 +168,74 @@ export default function ContactPage() {
                 {/* Social Links */}
                 <div className="mt-12">
                   <h3 className="font-semibold text-neutral-900 mb-4">
-                    Follow Us
+                    Connect With Me
                   </h3>
                   <div className="flex gap-4">
-                    {["Twitter", "LinkedIn", "GitHub", "Instagram"].map(
-                      (social, index) => (
-                        <motion.a
-                          key={social}
-                          href="#"
-                          initial={{ opacity: 0, scale: 0.8 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          transition={{ duration: 0.3, delay: 0.5 + index * 0.1 }}
-                          whileHover={{ scale: 1.1 }}
-                          className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 text-white flex items-center justify-center font-semibold text-sm shadow-lg hover:shadow-xl transition-shadow duration-300"
-                        >
-                          {social[0]}
-                        </motion.a>
-                      )
-                    )}
+                    <motion.a
+                      href="https://github.com/sham-kumar-s"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.3, delay: 0.5 }}
+                      whileHover={{ scale: 1.15 }}
+                      className="w-12 h-12 rounded-full bg-gradient-to-br from-gray-700 to-gray-900 text-white flex items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300"
+                      aria-label="GitHub"
+                    >
+                      <Github size={20} />
+                    </motion.a>
+                    <motion.a
+                      href="https://www.linkedin.com/in/sham-kumar-s/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.3, delay: 0.6 }}
+                      whileHover={{ scale: 1.15 }}
+                      className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-600 to-blue-800 text-white flex items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300"
+                      aria-label="LinkedIn"
+                    >
+                      <Linkedin size={20} />
+                    </motion.a>
+                    <motion.a
+                      href="https://www.instagram.com/sham_kumar_s_/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.3, delay: 0.7 }}
+                      whileHover={{ scale: 1.15 }}
+                      className="w-12 h-12 rounded-full bg-gradient-to-br from-pink-500 to-purple-600 text-white flex items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300"
+                      aria-label="Instagram"
+                    >
+                      <Instagram size={20} />
+                    </motion.a>
+                    <motion.a
+                      href="https://x.com/Shamkumar2002"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.3, delay: 0.8 }}
+                      whileHover={{ scale: 1.15 }}
+                      className="w-12 h-12 rounded-full bg-gradient-to-br from-gray-800 to-black text-white flex items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300"
+                      aria-label="X (Twitter)"
+                    >
+                      <XIcon size={18} />
+                    </motion.a>
+                    <motion.a
+                      href="https://t.me/9361909512"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.3, delay: 0.9 }}
+                      whileHover={{ scale: 1.15 }}
+                      className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 text-white flex items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300"
+                      aria-label="Telegram"
+                    >
+                      <Send size={18} />
+                    </motion.a>
                   </div>
                 </div>
               </motion.div>

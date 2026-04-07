@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { CASE_STUDIES } from "@/app/lib/projects";
-import MagicBento from "@/app/components/ui/MagicBento";
+import ProjectCard from "@/app/components/ui/ProjectCard";
 import { FlipWords } from "@/app/components/ui/FlipWords";
 import TechCard from "@/app/components/ui/TechCard";
 
@@ -91,7 +91,7 @@ export default function Page() {
       <div className="relative z-10 max-w-6xl mx-auto text-center min-h-screen flex flex-col justify-center">
         {/* Header Section */}
         <div className="mb-16 md:mb-20 border border-gray-200 rounded-2xl p-8 md:p-12 bg-white/50 backdrop-blur-sm">
-          <div className="text-4xl md:text-5xl lg:text-7xl font-bold text-neutral-900 mb-6 tracking-tight">
+          <div className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-neutral-900 mb-6 tracking-tight">
             I love creating
             <br />
             <FlipWords
@@ -103,7 +103,7 @@ export default function Page() {
               className="text-blue-600 dark:text-blue-600"
             />
           </div>
-          <div className="text-lg md:text-xl lg:text-2xl text-neutral-500 mb-8 max-w-3xl mx-auto">
+          <div className="text-base sm:text-lg md:text-xl lg:text-2xl text-neutral-500 mb-8 max-w-3xl mx-auto">
             A powerful and customizable text animation component with smooth
             transitions
           </div>
@@ -197,34 +197,18 @@ export default function Page() {
             <Link
               key={project.slug}
               href={`/case-studies/${project.slug}`}
-              className="block w-[250px] h-[250px]"
+              className="block w-full sm:w-[calc(50%-1.25rem)] lg:w-[calc(33.333%-1.67rem)] aspect-[4/3]"
             >
-              <MagicBento
-                textAutoHide={true}
-                enableStars
-                enableSpotlight
-                enableBorderGlow={true}
-                enableTilt={false}
-                enableMagnetism={false}
-                clickEffect
-                spotlightRadius={400}
-                particleCount={12}
-                glowColor="132, 0, 255"
-                disableAnimations={false}
-                className="h-full w-full pointer-events-none"
-              >
-                <div className="p-6">
-                  <h2
-                    className="text-xl font-bold mb-2 transition-colors"
-                    style={{ color: "black" }}
-                  >
+              <ProjectCard className="h-full w-full">
+                <div className="p-6 flex flex-col justify-center h-full">
+                  <h2 className="text-xl font-bold mb-2 text-black transition-colors hover:text-blue-600">
                     {project.title}
                   </h2>
-                  <p className="text-sm leading-relaxed line-clamp-3" style={{ color: "#363636" }}>
+                  <p className="text-sm leading-relaxed line-clamp-3 text-gray-600">
                     {project.description}
                   </p>
                 </div>
-              </MagicBento>
+              </ProjectCard>
             </Link>
           ))}
         </div>

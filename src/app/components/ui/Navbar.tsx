@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 // ------------------------------------------------------------------
 // 1. Main Navbar Container (Sticky, White Background)
@@ -182,9 +183,13 @@ export const NavbarLogo = () => {
       href="/"
       className="flex items-center space-x-2 text-neutral-900 hover:opacity-80 transition-opacity"
     >
-      <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-neutral-900 text-white font-bold">
-        S
-      </div>
+      <Image 
+        src="/Logo-sham.jpg" 
+        alt="Logo"
+        width={32}
+        height={32}
+        className="rounded-lg object-cover"
+      />
       <span className="text-lg font-bold">Sham</span>
     </Link>
   );

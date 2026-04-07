@@ -2,7 +2,8 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Code, Smartphone, Headphones, Search, Palette, Zap } from "lucide-react";
+import Image from "next/image";
+import { Code, Smartphone, Headphones, Search, Palette } from "lucide-react";
 import PageTransition from "@/app/components/animations/PageTransition";
 
 interface Service {
@@ -25,7 +26,7 @@ const services: Service[] = [
       "Progressive Web Apps (PWA)",
       "API development & integration",
     ],
-    image: "🌐",
+    image: "/Web Development.jfif",
   },
   {
     icon: <Smartphone className="w-8 h-8" />,
@@ -38,7 +39,7 @@ const services: Service[] = [
       "App Store optimization",
       "Backend & API integration",
     ],
-    image: "📱",
+    image: "/App-Development.jpg",
   },
   {
     icon: <Headphones className="w-8 h-8" />,
@@ -51,7 +52,7 @@ const services: Service[] = [
       "Performance optimization",
       "Security patches",
     ],
-    image: "🛠️",
+    image: "/Development-Support.jpg",
   },
   {
     icon: <Search className="w-8 h-8" />,
@@ -64,7 +65,7 @@ const services: Service[] = [
       "Technical SEO audits",
       "Performance tracking",
     ],
-    image: "📈",
+    image: "/SEO-Optimization.jpg",
   },
   {
     icon: <Palette className="w-8 h-8" />,
@@ -77,20 +78,7 @@ const services: Service[] = [
       "Multiple format delivery",
       "Unlimited revisions",
     ],
-    image: "🎨",
-  },
-  {
-    icon: <Zap className="w-8 h-8" />,
-    title: "UI/UX Design",
-    description:
-      "Design intuitive and engaging user interfaces that provide seamless experiences across all devices and platforms.",
-    features: [
-      "User research & testing",
-      "Wireframing & prototyping",
-      "Responsive design",
-      "Design system creation",
-    ],
-    image: "✨",
+    image: "/Logo-Designing.jpg",
   },
 ];
 
@@ -112,7 +100,7 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
           isEven ? "lg:flex-row" : "lg:flex-row-reverse"
         } items-center gap-12 lg:gap-16`}
       >
-        {/* Image/Icon Side */}
+        {/* Image Side */}
         <motion.div
           initial={{ opacity: 0, x: isEven ? -50 : 50 }}
           animate={
@@ -123,15 +111,19 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="flex-1 w-full"
         >
-          <div className="relative group">
+          <div className="relative group max-w-md mx-auto">
             {/* Glow effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500 opacity-0 group-hover:opacity-100" />
 
-            {/* Main card */}
-            <div className="relative bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-12 lg:p-16 flex items-center justify-center border border-gray-200 group-hover:border-blue-300 transition-all duration-500 shadow-lg group-hover:shadow-2xl">
-              <div className="text-9xl transform group-hover:scale-110 transition-transform duration-500">
-                {service.image}
-              </div>
+            {/* Main image card */}
+            <div className={`relative aspect-square rounded-3xl overflow-hidden border border-gray-200 transition-all duration-500 shadow-lg group-hover:shadow-2xl ${service.title === "App Development" ? "bg-white" : ""}`}>
+              <Image
+                src={service.image}
+                alt={service.title}
+                fill
+                className={`transform group-hover:scale-110 transition-transform duration-500 ${service.title === "App Development" ? "object-contain p-4" : "object-cover"}`}
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
             </div>
           </div>
         </motion.div>
